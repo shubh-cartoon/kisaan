@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Advertisement</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+</head>
+<body>
+	<div class="container">
+		<div class="col-md-3"></div>
+		<br>
+		<div class="col-md-6">
+    <%= form_for @farmer_instrument do |frm|%>
+	<p>
+	
+		<%= frm.label :'Farmer Name'%><br>
+		<%= frm.text_field :farmer_name,:disabled => true%>
+	</p>
+
+	<p>
+		<%= frm.label :'Instrument Name' %><br>
+		<%= frm.text_field :instrument_name,:disabled => true%>
+	</p>
+
+	<p>
+		<%= frm.label :rent_per_hour %><br>
+		<%= frm.number_field :rent_per_hour %>
+	</p>
+
+	<p>
+		<%= frm.label :deposit %><br>
+		<%= frm.number_field :deposit %>
+	</p>
+
+	<p>
+		<%= frm.label :is_available %><br>
+		<%= frm.radio_button :is_available, 'true' %> True<br />
+    <%= frm.radio_button :is_available, 'false' %> False<br />
+	</p>
+
+	<p>
+		<%= frm.label :available_from %><br>
+		<%= frm.date_field :available_from %>
+	</p>
+
+	<p>
+		<%= frm.label :available_to %><br>
+		<%= frm.date_field :available_to %>
+	</p>
+
+	 <p>
+    <%= frm.submit %>
+  </p>
+<% end %>
+</div>
+</div>
+</body>
+</html>
