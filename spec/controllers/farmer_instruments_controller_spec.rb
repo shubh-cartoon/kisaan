@@ -5,7 +5,7 @@ RSpec.describe FarmerInstrumentsController, type: :controller do
   		@farmer_obj = create(:farmer)
 		@instrument_obj = create(:instrument)
 		@farmer_instrument_obj = create(:farmer_instrument, farmer_id: @farmer_obj.id, instrument_id: @instrument_obj.id)
-	
+		
 	end
 	
 	it 'render index template' do
@@ -38,5 +38,7 @@ RSpec.describe FarmerInstrumentsController, type: :controller do
 		response.should redirect_to farmer_instruments_url
   	end
 
+  	it "POST #create" do
   		
+  	end
 end
